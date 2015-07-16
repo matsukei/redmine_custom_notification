@@ -7,7 +7,7 @@ class ProjectNotificationSetting < ActiveRecord::Base
   belongs_to :project
   safe_attributes 'project_id', 'project_name'
 
-  validates :project_id, uniqueness: true, presence: true
+  validates :project_id, uniqueness: true
 
   def replace_subject(subject)
     subject.sub!(project.name, project_name) if project_name.present?
