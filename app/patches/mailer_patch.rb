@@ -2,11 +2,11 @@ require_dependency 'mailer'
 
 module CustomNotification
   module MailerPatch
-    unloadable
-
     extend ActiveSupport::Concern
 
     included do
+      unloadable
+
       alias_method :mail_without_custom_notification, :mail
 
       def mail(local_headers = {}, &block)

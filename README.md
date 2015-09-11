@@ -16,4 +16,4 @@
 
 ## Supported versions
 
-* Redmine 2.6.0
+* Redmine 3.1.0

@@ -1,6 +1,0 @@
-<% project.build_notification_setting unless project.notification_setting.present? %>
-
-<%= form.fields_for :notification_setting do |f| %>
-  <%= f.hidden_field :project_id, value: project.id %>
-  <p><%= f.text_field :project_name, size: 60 %></p>
-<% end %>

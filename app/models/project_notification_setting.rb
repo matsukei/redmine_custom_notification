@@ -1,8 +1,7 @@
 # coding: utf-8
 class ProjectNotificationSetting < ActiveRecord::Base
-  unloadable
-
   include Redmine::SafeAttributes
+  unloadable
 
   belongs_to :project
   safe_attributes 'project_id', 'project_name'
